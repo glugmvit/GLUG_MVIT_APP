@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <ImageButton
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_drawer_white"
+        android:id="@+id/DrawerButton"
+        android:background="#00000000"
+        android:layout_gravity="start"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="GLUGMvit"
+        android:layout_alignParentEnd="true"
+        android:paddingTop="6dp"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_vertical"/>
+</RelativeLayout>
