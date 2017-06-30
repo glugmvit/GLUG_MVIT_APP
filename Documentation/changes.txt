@@ -1,0 +1,10 @@
+25/06/2017:
+	2:38 PM:	
+			First Upload, containing the basic skeleton of the app on the master branch.
+
+26/06/2017:
+	11:37 AM:
+			Created a clone of master branch as Development branch.
+
+	12:02 AM:
+			Added Documentation to both Master and Development branches.

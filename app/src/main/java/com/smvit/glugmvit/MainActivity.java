@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         DrawerList.add("Members");
         lv.setAdapter(new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,DrawerList));
         cf=new ContentFragment();
+        lv.setAdapter(new ArrayAdapter<>(MainActivity.this,android.R.layout.simple_list_item_1,DrawerList));
         Bundle b=new Bundle();
         b.putInt("Num",0);
         cf.setArguments(b);
