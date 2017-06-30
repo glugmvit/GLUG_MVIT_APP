@@ -8,7 +8,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 /**
- * Created by vibhor on 25-06-2017.
+ * Created by VibhorSharma on 25-06-2017.
+ * Fragment for Tabbed Layout in overvie section
  */
 
 public class PlaceholderFragment extends Fragment {
