@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GLUGMvit</string>
+    <string name="section_format">Content of section: %1$d</string>
 </resources>
