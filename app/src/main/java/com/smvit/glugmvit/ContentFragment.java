@@ -15,8 +15,6 @@ import android.view.ViewGroup;
 
 public class ContentFragment extends Fragment {
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Bundle b=getArguments();
@@ -52,10 +50,9 @@ public class ContentFragment extends Fragment {
         mViewPager = (ViewPager) view.findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabs);
+        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.OverviewTabs);
         tabLayout.setTabTextColors(0xFFD7D7D7,0xFFFFFFFF);
         tabLayout.setupWithViewPager(mViewPager);
-
     }
 }
 

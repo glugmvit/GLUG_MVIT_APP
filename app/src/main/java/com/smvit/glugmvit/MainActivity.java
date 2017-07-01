@@ -1,6 +1,5 @@
 package com.smvit.glugmvit;
 
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -15,13 +14,17 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Created by susmit
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     DrawerLayout dl;
     ListView lv;
     List<String> DrawerList;
-    FragmentTransaction ft;
     ContentFragment cf;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         DrawerList.add("Overview");
         DrawerList.add("About");
         DrawerList.add("Members");
-        lv.setAdapter(new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,DrawerList));
+        lv.setAdapter(new ArrayAdapter<>(MainActivity.this,android.R.layout.simple_list_item_1,DrawerList));
         cf=new ContentFragment();
         lv.setAdapter(new ArrayAdapter<>(MainActivity.this,android.R.layout.simple_list_item_1,DrawerList));
         Bundle b=new Bundle();
@@ -61,12 +64,12 @@ public class MainActivity extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
                 cf=new ContentFragment();
                 Bundle b=new Bundle();
                 b.putInt("Num",position);
                 cf.setArguments(b);
                 getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment,cf).commit();
+                dl.closeDrawer(Gravity.START,true);
             }
         });
     }
