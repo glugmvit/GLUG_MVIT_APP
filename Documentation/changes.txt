@@ -8,11 +8,13 @@
 
 	12:02 AM:
 			Added Documentation to both Master and Development branches.
-<<<<<<< HEAD
-
+      
 01/07/17:
 	11:44 AM:
 			Added Tabs
 			Refined the fragments and related elements
-=======
->>>>>>> master
+	
+	2:03 PM:
+			Added Cards
+			Updated compatibility
+			Minor UI update: Drawer animation
