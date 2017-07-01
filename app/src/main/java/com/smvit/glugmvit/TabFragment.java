@@ -11,7 +11,8 @@ import android.view.ViewGroup;
  * This class is used to set the content of the tabs in the "overview" section
  */
 
-public class TabFragment extends Fragment {
+public class TabFragment extends Fragment
+{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Bundle b=getArguments();

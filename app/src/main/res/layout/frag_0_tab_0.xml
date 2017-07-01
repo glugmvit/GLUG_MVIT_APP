@@ -3,6 +3,7 @@
 <!---Edited by Susmit on 1st July 2017-->
 
 <!--contents of the "Upcoming" tab-->
+
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
