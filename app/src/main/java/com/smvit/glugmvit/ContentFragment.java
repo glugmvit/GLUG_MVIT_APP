@@ -1,7 +1,10 @@
 package com.smvit.glugmvit;
 
-import android.app.Fragment;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +15,8 @@ import android.view.ViewGroup;
 
 public class ContentFragment extends Fragment {
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Bundle b=getArguments();
@@ -20,6 +25,7 @@ public class ContentFragment extends Fragment {
         {
             case 0:
                 view = inflater.inflate(R.layout.fragment_0, container, false);
+                setView(view,getChildFragmentManager());
                 break;
             case 1:
                 view = inflater.inflate(R.layout.fragment_1, container, false);
@@ -29,4 +35,27 @@ public class ContentFragment extends Fragment {
         }
         return view;
     }
+
+    /**
+     * Created by VibhorSharma 30/06/17
+     * Takes a view and fragment manager and sets the adapter to view_pager and the view_pager to TabLayout
+     * @param view
+     * @param fragmentManager
+     */
+    public void setView(View view, FragmentManager fragmentManager)
+    {
+        SectionsPagerAdapter mSectionsPagerAdapter;
+        ViewPager mViewPager;
+        mSectionsPagerAdapter = new SectionsPagerAdapter(fragmentManager);
+
+        // Set up the ViewPager with the sections adapter.
+        mViewPager = (ViewPager) view.findViewById(R.id.container);
+        mViewPager.setAdapter(mSectionsPagerAdapter);
+
+        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabs);
+        tabLayout.setTabTextColors(0xFFD7D7D7,0xFFFFFFFF);
+        tabLayout.setupWithViewPager(mViewPager);
+
+    }
 }
+

@@ -10,7 +10,7 @@
         android:layout_height="48dp"
         android:src="@drawable/ic_drawer_white"
         android:id="@+id/DrawerButton"
-        android:background="#00000000"
+        android:background="#00fcfcfc"
         android:layout_gravity="start"/>
 
     <TextView
