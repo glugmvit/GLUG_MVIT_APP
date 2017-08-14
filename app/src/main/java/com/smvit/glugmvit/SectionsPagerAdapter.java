@@ -19,13 +19,19 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        TabFragment tabFragment=new TabFragment();
+     /*   TabFragment tabFragment=new TabFragment();
         Bundle b=new Bundle();
         b.putInt("TabNum",position);
         tabFragment.setArguments(b);
-        return tabFragment;
-    }
+        return tabFragment;*/
+        if (position == 0)
+            return new Tab_fragment_0();
+        else if (position == 1)
+            return new Tab_fragment_1();
+         else
+        return new Tab_fragment_2();
 
+    }
     @Override
     public int getCount() {
         // Show 3 total pages.
