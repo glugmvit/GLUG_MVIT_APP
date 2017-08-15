@@ -18,3 +18,6 @@
 			Added Cards
 			Updated compatibility
 			Minor UI update: Drawer animation
+ 15/08/2017:
+    1:53 PM:
+            Added design for current project section
