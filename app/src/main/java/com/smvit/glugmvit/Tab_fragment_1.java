@@ -52,18 +52,4 @@ public class Tab_fragment_1 extends Fragment {
 
         return view;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
