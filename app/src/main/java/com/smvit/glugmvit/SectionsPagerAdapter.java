@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentPagerAdapter;
  * Created by VibhorSharma on 25-06-2017.
  * Adapter for the view pager in overview section
  * Modified by Susmit on 1/07/2017
+ * Modified by Mukund on 15/08/2017
  */
 
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
@@ -19,12 +20,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-     /*   TabFragment tabFragment=new TabFragment();
-        Bundle b=new Bundle();
-        b.putInt("TabNum",position);
-        tabFragment.setArguments(b);
-        return tabFragment;*/
-        if (position == 0)
+       if (position == 0)
             return new Tab_fragment_0();
         else if (position == 1)
             return new Tab_fragment_1();

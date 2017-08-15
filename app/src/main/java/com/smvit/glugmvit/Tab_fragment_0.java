@@ -2,6 +2,7 @@ package com.smvit.glugmvit;
 
 /**
  * Created by mukund on 8/14/2017.
+ * class for the upcoming section
  */
 
 import android.os.Bundle;
