@@ -70,7 +70,6 @@ public class Tab_fragment_0 extends Fragment {
         @Override
         protected void onPostExecute(Void v)
         {
-            //pd.dismiss();
             srl.setRefreshing(false);
             t1.setText(Shared.DbObjs.get(0).name);
             t2.setText(Shared.DbObjs.get(0).description);
