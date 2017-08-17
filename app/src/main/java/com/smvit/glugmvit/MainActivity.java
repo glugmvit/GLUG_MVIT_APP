@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment,cf).commit();
 
-        new AsyncTask<Void,Void,Void>()
+        /*new AsyncTask<Void,Void,Void>()
         {
             ProgressDialog pd;
             @Override
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 pd.dismiss();
             }
-        }.execute();
+        }.execute(); */
 
         ib.setOnClickListener(new View.OnClickListener() {
             @Override
