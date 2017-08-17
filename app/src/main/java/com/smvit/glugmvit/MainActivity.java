@@ -2,7 +2,6 @@ package com.smvit.glugmvit;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -64,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment,cf).commit();
 
-        /*new AsyncTask<Void,Void,Void>()
+        new AsyncTask<Void,Void,Void>()
         {
             ProgressDialog pd;
             @Override
@@ -89,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 pd.dismiss();
             }
-        }.execute(); */
+        }.execute();
 
         ib.setOnClickListener(new View.OnClickListener() {
             @Override

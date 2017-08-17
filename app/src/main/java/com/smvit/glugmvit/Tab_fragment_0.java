@@ -6,7 +6,6 @@ package com.smvit.glugmvit;
  * Modified by Susmit on 17/08/2017
  */
 
-import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -46,13 +45,10 @@ public class Tab_fragment_0 extends Fragment {
     }
     public class mSyncTask extends AsyncTask<Void,Void,Void> {
 
-        ProgressDialog pd;
-
         @Override
         protected void onPreExecute()
         {
             srl.setRefreshing(true);
-            //pd.show();
         }
 
         @Override
