@@ -2,6 +2,7 @@ package com.smvit.glugmvit;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -16,8 +17,11 @@ import android.widget.ListView;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 
+import org.bson.Document;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by susmit
@@ -47,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
         lv=(ListView)findViewById(R.id.DrawerView);
 
         Shared.DbObjs=new ArrayList<>();
+        Shared.CurrentProjectsList=new ArrayList<>();
+        Shared.UpcomingEventsList=new ArrayList<>();
 
         Shared.appContext=getApplicationContext();
 
@@ -80,7 +86,9 @@ public class MainActivity extends AppCompatActivity {
                 Shared.client=new MongoClient(uri);
                 //credentials=MongoCredential.createCredential("testUser","testDb",new String("qwerty").toCharArray());
                 Shared.db=Shared.client.getDatabase("glugmvitappdb");
-                Shared.coll=Shared.db.getCollection("TestCollection");
+                Shared.TestCollection=Shared.db.getCollection("TestCollection");
+                Shared.UECollection=Shared.db.getCollection("UpcomingEventsCollection");
+                Shared.CPCollection=Shared.db.getCollection("CurrentProjectsCollection");
                 return null;
             }
             @Override

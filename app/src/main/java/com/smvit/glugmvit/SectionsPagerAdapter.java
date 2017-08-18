@@ -20,12 +20,15 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 0)
+        if (position == 0) {
             return new Tab_fragment_0();
-        else if (position == 1)
+        }
+        else if (position == 1) {
             return new Tab_fragment_1();
-         else
-        return new Tab_fragment_2();
+        }
+         else {
+            return new Tab_fragment_2();
+        }
     }
 
     @Override
