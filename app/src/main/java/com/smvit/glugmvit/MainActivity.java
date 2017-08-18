@@ -2,11 +2,10 @@ package com.smvit.glugmvit;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
-import android.support.v4.app.Fragment;
+import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,11 +16,8 @@ import android.widget.ListView;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 
-import org.bson.Document;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by susmit
