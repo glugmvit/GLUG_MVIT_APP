@@ -82,14 +82,15 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             protected Void doInBackground(Void... params) {
-                MongoClientURI uri=new MongoClientURI("mongodb://Susmit:abcd1234@ds145273.mlab.com:45273/glugmvitappdb");
-                Shared.client=new MongoClient(uri);
-                //credentials=MongoCredential.createCredential("testUser","testDb",new String("qwerty").toCharArray());
-                Shared.db=Shared.client.getDatabase("glugmvitappdb");
-                Shared.TestCollection=Shared.db.getCollection("TestCollection");
-                Shared.UECollection=Shared.db.getCollection("UpcomingEventsCollection");
-                Shared.CPCollection=Shared.db.getCollection("CurrentProjectsCollection");
-                return null;
+                System.setSecurityManager(null);
+                    MongoClientURI uri = new MongoClientURI("mongodb://Susmit:abcd1234@ds145273.mlab.com:45273/glugmvitappdb");
+                    Shared.client = new MongoClient(uri);
+                    //credentials=MongoCredential.createCredential("testUser","testDb",new String("qwerty").toCharArray());
+                    Shared.db = Shared.client.getDatabase("glugmvitappdb");
+                    Shared.TestCollection = Shared.db.getCollection("TestCollection");
+                    Shared.UECollection = Shared.db.getCollection("UpcomingEventsCollection");
+                    Shared.CPCollection = Shared.db.getCollection("CurrentProjectsCollection");
+                    return null;
             }
             @Override
             protected void onPostExecute(Void v)
@@ -116,5 +117,11 @@ public class MainActivity extends AppCompatActivity {
                 dl.closeDrawer(Gravity.START,true);
             }
         });
+    }
+    @Override
+    public void onDestroy()
+    {
+        super.onDestroy();
+        Shared.client.close();
     }
 }
