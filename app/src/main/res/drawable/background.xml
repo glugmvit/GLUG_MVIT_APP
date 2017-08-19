@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Added by Abhijeet Singh for fixing Splash Screen load time -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/white" />
+
+    <item>
+        <bitmap android:src="@drawable/gluglogo"
+            android:gravity="center" />
+    </item>
+
+</layer-list>
