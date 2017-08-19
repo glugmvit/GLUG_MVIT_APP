@@ -37,6 +37,7 @@ import java.util.concurrent.ExecutionException;
 public class SplashActivity extends Activity {
     Button b1;
     Button b2;
+    LoginTask loginTask;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +53,8 @@ public class SplashActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Shared.ADMIN_ACCESS=true;
-                new LoginTask().execute();
+                loginTask=new LoginTask();
+                loginTask.execute();
                 Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(intent);
             }
@@ -61,7 +63,8 @@ public class SplashActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Shared.ADMIN_ACCESS=false;
-                new LoginTask().execute();
+                loginTask=new LoginTask();
+                loginTask.execute();
                 Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(intent);
             }
@@ -98,5 +101,19 @@ public class SplashActivity extends Activity {
         {
             pd.dismiss();
         }
+    }
+
+    @Override
+    public void onPause()
+    {
+        super.onPause();
+        loginTask.cancel(true);
+    }
+
+    @Override
+    public void onDestroy()
+    {
+        super.onDestroy();
+        loginTask.cancel(true);
     }
 }

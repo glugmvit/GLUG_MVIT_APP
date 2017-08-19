@@ -28,6 +28,7 @@ public class Tab_fragment_0 extends Fragment {
     LinearLayout ll;
     LayoutInflater li;
     boolean first;
+    mSyncTask s;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
@@ -47,7 +48,6 @@ public class Tab_fragment_0 extends Fragment {
         ll=(LinearLayout)view.findViewById(R.id.f0t0ll);
         first=true;
         srl=(SwipeRefreshLayout)view.findViewById(R.id.srl_t0);
-        refresh();
         srl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -60,7 +60,7 @@ public class Tab_fragment_0 extends Fragment {
     void refresh()
     {
         //Shared.TestCollection.insertOne(new Document("test2","val2"));
-        mSyncTask s=new mSyncTask();
+        s=new mSyncTask();
         s.execute();
     }
 
@@ -121,5 +121,29 @@ public class Tab_fragment_0 extends Fragment {
             t2.setText(Shared.DbObjs.get(i).description);
             ll.addView(cv);
         }
+    }
+
+    @Override
+    public void onPause()
+    {
+        super.onPause();
+        ll.removeAllViews();
+        Shared.DbObjs.clear();
+        s.cancel(true);
+    }
+
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+        s=new mSyncTask();
+        s.execute();
+    }
+
+    @Override
+    public void onDestroy()
+    {
+        super.onDestroy();
+        s.cancel(true);
     }
 }
