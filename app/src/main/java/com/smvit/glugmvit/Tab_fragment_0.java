@@ -59,7 +59,6 @@ public class Tab_fragment_0 extends Fragment {
 
     void refresh()
     {
-        //Shared.TestCollection.insertOne(new Document("test2","val2"));
         s=new mSyncTask();
         s.execute();
     }
@@ -82,7 +81,6 @@ public class Tab_fragment_0 extends Fragment {
             {
                 Document c=(Document)cursor.next();
                 Shared.DbObjs.add(0,new DbObject((String)c.get("name"),(String)c.get("value")));
-                //Shared.UpcomingEventsList.add(new UpcomingEventsDataObject((String)c.get("title"),(String)c.get("presentor"),(String)c.get("desc"),(String)c.get("imglink")));
             }
             return true;
         }
@@ -105,8 +103,6 @@ public class Tab_fragment_0 extends Fragment {
                 }
                 updateUECards();
             }
-            //t1.setText(Shared.DbObjs.get(0).name);
-            //t2.setText(Shared.DbObjs.get(0).description);
         }
     }
 

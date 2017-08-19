@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
@@ -32,7 +31,6 @@ public class Tab_fragment_1 extends Fragment {
         desctext=(TextView) view.findViewById(R.id.project_description);
         title_members=(TextView) view.findViewById(R.id.title_members);
         members=(TextView) view.findViewById(R.id.members);
-        LinearLayout fixedPart=(LinearLayout)view.findViewById(R.id.fixedPart);
         show.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

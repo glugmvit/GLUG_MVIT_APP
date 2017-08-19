@@ -11,9 +11,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
-
 import java.util.ArrayList;
 import java.util.List;
 
