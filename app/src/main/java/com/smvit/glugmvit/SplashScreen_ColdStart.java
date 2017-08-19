@@ -10,6 +10,6 @@ import android.os.SystemClock;
 public class SplashScreen_ColdStart extends Application {
     public void onCreate() {
         super.onCreate();
-        SystemClock.sleep(500);
+        SystemClock.sleep(1000);
     }
 }

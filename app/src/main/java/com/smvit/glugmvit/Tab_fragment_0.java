@@ -6,8 +6,11 @@ package com.smvit.glugmvit;
  * Modified by Susmit on 17/08/2017
  */
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
@@ -16,12 +19,9 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.mongodb.DBObject;
 import com.mongodb.client.MongoCursor;
 
 import org.bson.Document;
-
-import java.util.ArrayList;
 
 public class Tab_fragment_0 extends Fragment {
     SwipeRefreshLayout srl;
@@ -33,6 +33,17 @@ public class Tab_fragment_0 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         li=inflater;
         View view = inflater.inflate(R.layout.frag_0_tab_0,container, false);
+        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.x);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+                emailIntent.setData(Uri.parse("mailto:some@gmail.com"));
+                startActivity(emailIntent);
+            }
+        });
+        if(!Shared.ADMIN_ACCESS)
+            fab.setVisibility(View.INVISIBLE);
         ll=(LinearLayout)view.findViewById(R.id.f0t0ll);
         first=true;
         srl=(SwipeRefreshLayout)view.findViewById(R.id.srl_t0);

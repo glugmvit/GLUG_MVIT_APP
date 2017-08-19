@@ -8,6 +8,7 @@ import com.mongodb.MongoCredential;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,10 +23,10 @@ public class Shared
     static MongoCollection UECollection;
     static MongoCollection CPCollection;
     static MongoCollection TestCollection;
-    static List<DbObject> DbObjs;
-    static List<UpcomingEventsDataObject> UpcomingEventsList;
-    static List<CurrentProjectsDataObject> CurrentProjectsList;
+    static ArrayList<DbObject> DbObjs;
+    static ArrayList<UpcomingEventsDataObject> UpcomingEventsList;
+    static ArrayList<CurrentProjectsDataObject> CurrentProjectsList;
     static Context appContext;
     static int tables_in_collection;
-    static List<Fragment> DrawerFragments;
+    static boolean ADMIN_ACCESS;
 }
