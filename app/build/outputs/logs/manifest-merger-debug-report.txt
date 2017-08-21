@@ -1,0 +1,115 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:2:1-32:12
+	package
+		ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:3:5-33
+		INJECTED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml
+		INJECTED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml
+		INJECTED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml
+		INJECTED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:5:5-66
+	android:name
+		ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:5:22-64
+application
+ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:7:5-30:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.0-beta4] /home/susmit/.android/build-cache/5cf95df3f237bfbd9b3f5b02be1dd6397dd3d64e/output/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:cardview-v7:25.3.1] /home/susmit/.android/build-cache/3fa7992fe58f9cb635c861fde98550d9eeb47ab4/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:design:25.3.1] /home/susmit/.android/build-cache/500ec526f315d82c36ed8587faef6626ff4f6fe0/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/susmit/.android/build-cache/38455a56a6e39df928a55e784fd678141425eb71/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/susmit/.android/build-cache/9daec62290fabcaf0a52d5ae1ccf8eda053b9670/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/susmit/.android/build-cache/b1f7097f2d993c4073021596658160410876e414/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] /home/susmit/.android/build-cache/7fbb3714069cc950cac5ae131f85b83ce102a1b6/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /home/susmit/.android/build-cache/8f498dd2435747d645a453420fc3b586616fb6d0/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /home/susmit/.android/build-cache/04d6d4f2aa3be33c3c1efce95a2aa7e34ea700f6/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/susmit/.android/build-cache/799f22d349febb0dea9434365bfed4c451656cb0/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/susmit/.android/build-cache/af48a666441e51190725c18c6ce9095d493a9828/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/susmit/.android/build-cache/9bc5726181bc344c577846ef309a2ddd2b418ad9/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /home/susmit/.android/build-cache/269a2c0f266c1b330aab816f5926cb3b0f895f05/output/AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:10:9-41
+	android:supportsRtl
+		ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:12:9-35
+	android:roundIcon
+		ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:11:9-54
+	android:allowBackup
+		ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:8:9-35
+	android:icon
+		ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:9:9-43
+	android:theme
+		ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:13:9-40
+	android:name
+		ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:14:9-47
+activity#com.smvit.glugmvit.SplashActivity
+ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:17:9-22:20
+	android:theme
+		ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:17:50-84
+	android:name
+		ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:17:19-49
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:18:13-21:29
+action#android.intent.action.MAIN
+ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:19:17-69
+	android:name
+		ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:19:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:20:17-77
+	android:name
+		ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:20:27-74
+activity#com.smvit.glugmvit.MainActivity
+ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:24:9-28:20
+	android:screenOrientation
+		ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:24:48-84
+	android:name
+		ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:24:19-47
+intent-filter#android.intent.action.MAIN
+ADDED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml:25:13-27:29
+uses-sdk
+INJECTED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.1] /home/susmit/.android/build-cache/021b9e4270f48ae1848c92f4ef535850560f07d6/output/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support.constraint:constraint-layout:1.0.0-beta4] /home/susmit/.android/build-cache/5cf95df3f237bfbd9b3f5b02be1dd6397dd3d64e/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:cardview-v7:25.3.1] /home/susmit/.android/build-cache/3fa7992fe58f9cb635c861fde98550d9eeb47ab4/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:25.3.1] /home/susmit/.android/build-cache/500ec526f315d82c36ed8587faef6626ff4f6fe0/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/susmit/.android/build-cache/38455a56a6e39df928a55e784fd678141425eb71/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/susmit/.android/build-cache/9daec62290fabcaf0a52d5ae1ccf8eda053b9670/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/susmit/.android/build-cache/b1f7097f2d993c4073021596658160410876e414/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/susmit/.android/build-cache/0fd12468c57de718bc67048342ba1b237347300c/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] /home/susmit/.android/build-cache/7fbb3714069cc950cac5ae131f85b83ce102a1b6/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.3.1] /home/susmit/.android/build-cache/8f498dd2435747d645a453420fc3b586616fb6d0/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /home/susmit/.android/build-cache/04d6d4f2aa3be33c3c1efce95a2aa7e34ea700f6/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/susmit/.android/build-cache/799f22d349febb0dea9434365bfed4c451656cb0/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/susmit/.android/build-cache/af48a666441e51190725c18c6ce9095d493a9828/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/susmit/.android/build-cache/9bc5726181bc344c577846ef309a2ddd2b418ad9/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] /home/susmit/.android/build-cache/269a2c0f266c1b330aab816f5926cb3b0f895f05/output/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] /home/susmit/.android/build-cache/500ec526f315d82c36ed8587faef6626ff4f6fe0/output/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml
+		INJECTED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml
+		INJECTED from /home/susmit/AndroidStudioProjects/GLUG_MVIT_APP/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:cardview-v7:25.3.1] /home/susmit/.android/build-cache/3fa7992fe58f9cb635c861fde98550d9eeb47ab4/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:design:25.3.1] /home/susmit/.android/build-cache/500ec526f315d82c36ed8587faef6626ff4f6fe0/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/susmit/.android/build-cache/38455a56a6e39df928a55e784fd678141425eb71/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/susmit/.android/build-cache/9daec62290fabcaf0a52d5ae1ccf8eda053b9670/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/susmit/.android/build-cache/b1f7097f2d993c4073021596658160410876e414/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/susmit/.android/build-cache/0fd12468c57de718bc67048342ba1b237347300c/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /home/susmit/.android/build-cache/7fbb3714069cc950cac5ae131f85b83ce102a1b6/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /home/susmit/.android/build-cache/8f498dd2435747d645a453420fc3b586616fb6d0/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /home/susmit/.android/build-cache/04d6d4f2aa3be33c3c1efce95a2aa7e34ea700f6/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/susmit/.android/build-cache/799f22d349febb0dea9434365bfed4c451656cb0/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/susmit/.android/build-cache/af48a666441e51190725c18c6ce9095d493a9828/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/susmit/.android/build-cache/9bc5726181bc344c577846ef309a2ddd2b418ad9/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /home/susmit/.android/build-cache/269a2c0f266c1b330aab816f5926cb3b0f895f05/output/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:cardview-v7:25.3.1] /home/susmit/.android/build-cache/3fa7992fe58f9cb635c861fde98550d9eeb47ab4/output/AndroidManifest.xml:24:9-31
+	android:name
+		ADDED from [com.android.support:cardview-v7:25.3.1] /home/susmit/.android/build-cache/3fa7992fe58f9cb635c861fde98550d9eeb47ab4/output/AndroidManifest.xml:23:9-47
