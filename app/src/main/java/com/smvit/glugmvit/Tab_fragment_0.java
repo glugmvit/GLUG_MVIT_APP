@@ -6,13 +6,12 @@ package com.smvit.glugmvit;
  * Modified by Susmit on 17/08/2017
  */
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
+import android.support.transition.TransitionManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,29 +24,19 @@ import org.bson.Document;
 
 public class Tab_fragment_0 extends Fragment {
     SwipeRefreshLayout srl;
-    LinearLayout ll;
     LayoutInflater li;
     boolean first;
+    boolean showing;
+    LinearLayout ll;
     mSyncTask s;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         li=inflater;
         View view = inflater.inflate(R.layout.frag_0_tab_0,container, false);
-        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.x);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-                emailIntent.setData(Uri.parse("mailto:some@gmail.com"));
-                startActivity(emailIntent);
-            }
-        });
-        if(!Shared.ADMIN_ACCESS)
-            fab.setVisibility(View.INVISIBLE);
-        ll=(LinearLayout)view.findViewById(R.id.f0t0ll);
         first=true;
         srl=(SwipeRefreshLayout)view.findViewById(R.id.srl_t0);
+        ll=(LinearLayout)srl.findViewById(R.id.f0t0ll);
         srl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -69,18 +58,18 @@ public class Tab_fragment_0 extends Fragment {
         protected void onPreExecute()
         {
             srl.setRefreshing(true);
-            Shared.DbObjs.removeAll(Shared.DbObjs.subList(0,Shared.DbObjs.size()));
+            Shared.UpcomingEventsList.clear();
         }
 
         @Override
         protected Boolean doInBackground(Void... params) {
-            if(Shared.TestCollection.count()<=0)
+            if(Shared.UECollection.count()<=0)
                 return false;
-            MongoCursor cursor=Shared.TestCollection.find().iterator();
+            MongoCursor cursor=Shared.UECollection.find().iterator();
             while(cursor.hasNext())
             {
                 Document c=(Document)cursor.next();
-                Shared.DbObjs.add(0,new DbObject((String)c.get("name"),(String)c.get("value")));
+                Shared.UpcomingEventsList.add(0,new UpcomingEventsDataObject((String)c.get("name"),(String)c.get("speaker"),(String)c.get("description"),(String)c.get("date"),(String)c.get("venue"),(String)c.get("extras"),null));
             }
             return true;
         }
@@ -108,14 +97,53 @@ public class Tab_fragment_0 extends Fragment {
 
     void updateUECards()
     {
-        for(int i=0;i<Shared.DbObjs.size();i++)
+        for(int x=0;x<Shared.UpcomingEventsList.size();x++)
         {
-            View cv=li.inflate(R.layout.upcoming_events_card_view,null);
-            TextView t1=(TextView)cv.findViewById(R.id.txtName);
-            t1.setText(Shared.DbObjs.get(i).name);
-            TextView t2=(TextView)cv.findViewById(R.id.txtSurname);
-            t2.setText(Shared.DbObjs.get(i).description);
-            ll.addView(cv);
+            final int i=x;
+            Shared.UpcomingEventsList.get(i).ll=(LinearLayout) LayoutInflater.from(getActivity()).inflate(R.layout.upcoming_events_card_view,null);
+            Shared.UpcomingEventsList.get(i).cv=(CardView)Shared.UpcomingEventsList.get(i).ll.findViewById(R.id.ue_card_view);
+
+            Shared.UpcomingEventsList.get(i).Event=(TextView)Shared.UpcomingEventsList.get(i).ll.findViewById(R.id.txtName);
+            Shared.UpcomingEventsList.get(i).Event.setText(Shared.UpcomingEventsList.get(i).event);
+
+            Shared.UpcomingEventsList.get(i).Desc=(TextView) Shared.UpcomingEventsList.get(i).ll.findViewById(R.id.ue_desc);
+            Shared.UpcomingEventsList.get(i).Desc.setText(Shared.UpcomingEventsList.get(i).desc);
+
+            Shared.UpcomingEventsList.get(i).Extras=(TextView)Shared.UpcomingEventsList.get(i).ll.findViewById(R.id.extras);
+            Shared.UpcomingEventsList.get(i).Extras.setText(Shared.UpcomingEventsList.get(i).prerequisites);
+
+            Shared.UpcomingEventsList.get(i).DnT=(TextView)Shared.UpcomingEventsList.get(i).ll.findViewById(R.id.dnt);
+            Shared.UpcomingEventsList.get(i).DnT.setText(Shared.UpcomingEventsList.get(i).datentime);
+
+            Shared.UpcomingEventsList.get(i).Venue=(TextView)Shared.UpcomingEventsList.get(i).ll.findViewById(R.id.venue);
+            Shared.UpcomingEventsList.get(i).Venue.setText(Shared.UpcomingEventsList.get(i).venue);
+
+            Shared.UpcomingEventsList.get(i).Speaker=(TextView)Shared.UpcomingEventsList.get(i).ll.findViewById(R.id.speaker);
+            Shared.UpcomingEventsList.get(i).Speaker.setText(Shared.UpcomingEventsList.get(i).speaker);
+
+            showing=false;
+
+            Shared.UpcomingEventsList.get(i).cv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(!showing) {
+                        showing=true;
+                        TransitionManager.beginDelayedTransition(Shared.UpcomingEventsList.get(i).cv);
+                        Shared.UpcomingEventsList.get(i).Speaker.setVisibility(View.VISIBLE);
+                        Shared.UpcomingEventsList.get(i).Venue.setVisibility(View.VISIBLE);
+                        Shared.UpcomingEventsList.get(i).Extras.setVisibility(View.VISIBLE);
+                    }
+                    else
+                    {
+                        showing=false;
+                        TransitionManager.beginDelayedTransition(Shared.UpcomingEventsList.get(i).cv);
+                        Shared.UpcomingEventsList.get(i).Speaker.setVisibility(View.GONE);
+                        Shared.UpcomingEventsList.get(i).Venue.setVisibility(View.GONE);
+                        Shared.UpcomingEventsList.get(i).Extras.setVisibility(View.GONE);
+                    }
+                }
+            });
+            ll.addView(Shared.UpcomingEventsList.get(i).ll);
         }
     }
 

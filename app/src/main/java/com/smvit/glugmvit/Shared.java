@@ -23,6 +23,4 @@ public class Shared
     static ArrayList<DbObject> DbObjs;
     static ArrayList<UpcomingEventsDataObject> UpcomingEventsList;
     static ArrayList<CurrentProjectsDataObject> CurrentProjectsList;
-    static Context appContext;
-    static boolean ADMIN_ACCESS;
 }

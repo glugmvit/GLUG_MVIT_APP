@@ -17,13 +17,6 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/admin_btn_style"
-            android:text=" Admin Access "
-            android:layout_margin="5dp"
-            android:id="@+id/adminBtn"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/member_btn_style"
             android:text=" Continue as member "

@@ -45,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
         Shared.CurrentProjectsList=new ArrayList<>();
         Shared.UpcomingEventsList=new ArrayList<>();
 
-        Shared.appContext=getApplicationContext();
-
         DrawerList=new ArrayList<>();
         DrawerList.add("Overview");
         DrawerList.add("About");

@@ -1,5 +1,10 @@
 package com.smvit.glugmvit;
 
+import android.support.v7.widget.CardView;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
 /**
  * Created by susmit on 18/8/17.
  */
@@ -7,24 +12,27 @@ package com.smvit.glugmvit;
 public class CurrentProjectsDataObject
 {
     String ProjectName;
-    String Collaborator;
     String Members;
     String desc;
     String GitLink;
     String imgLink;
+    LinearLayout ll;
+    CardView cv;
+    TextView title,desctext,title_members,members;
+    Button gitBtn;
+
     CurrentProjectsDataObject(String... params)
     {
         ProjectName=params[0];
-        Collaborator=params[1];
+        desc=params[1];
         Members=params[2];
-        desc=params[3];
-        GitLink=params[4];
-        imgLink=params[5];
+        GitLink=params[3];
+        imgLink=params[4];
     }
-    CurrentProjectsDataObject(String p,String c,String m,String d,String g, String i)
+
+    CurrentProjectsDataObject(String p,String m,String d,String g, String i)
     {
         ProjectName=p;
-        Collaborator=c;
         Members=m;
         desc=d;
         GitLink=g;
