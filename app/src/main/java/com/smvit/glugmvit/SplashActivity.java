@@ -70,7 +70,7 @@ public class SplashActivity extends Activity {
             //Shared.TestCollection=Shared.db.getCollection("events");
             //Shared.UECollection = Shared.db.getCollection("UpcomingEventsCollection");
             Shared.UECollection = Shared.db.getCollection("events");
-            Shared.CPCollection = Shared.db.getCollection("ProjectsCollection");
+            Shared.CPCollection = Shared.db.getCollection("projects");
             return null;
         }
         @Override

@@ -6,6 +6,8 @@ package com.smvit.glugmvit;
  * Modified by Susmit on 16/08/17
  */
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.transition.TransitionManager;
@@ -27,7 +29,6 @@ import org.bson.Document;
 public class Tab_fragment_1 extends Fragment {
     LinearLayout ll;
     SwipeRefreshLayout psrl;
-    boolean showing;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
@@ -60,7 +61,7 @@ public class Tab_fragment_1 extends Fragment {
             while(cursor.hasNext())
             {
                 Document c=(Document)cursor.next();
-                Shared.CurrentProjectsList.add(0,new CurrentProjectsDataObject((String)c.get("Project_Name"),(String)c.get("Project_Description"),(String)c.get("Members"),(String)c.get("Github_Link"),null));
+                Shared.CurrentProjectsList.add(0,new CurrentProjectsDataObject((String)c.get("project_name"),(String)c.get("project_description"),(String)c.get("members"),(String)c.get("github"),null));
             }
             return true;
         }
@@ -107,24 +108,30 @@ public class Tab_fragment_1 extends Fragment {
 
             Shared.CurrentProjectsList.get(i).members.setText(Shared.CurrentProjectsList.get(i).desc);
 
-            showing=false;
+            Shared.CurrentProjectsList.get(i).clicked=false;
 
             Shared.CurrentProjectsList.get(i).cv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(!showing) {
-                        showing=true;
+                    if(!Shared.CurrentProjectsList.get(i).clicked) {
+                        Shared.CurrentProjectsList.get(i).clicked=true;
                         TransitionManager.beginDelayedTransition(Shared.CurrentProjectsList.get(i).cv);
                         Shared.CurrentProjectsList.get(i).title_members.setVisibility(View.VISIBLE);
                         Shared.CurrentProjectsList.get(i).members.setVisibility(View.VISIBLE);
                     }
                     else
                     {
-                        showing=false;
+                        Shared.CurrentProjectsList.get(i).clicked=false;
                         TransitionManager.beginDelayedTransition(Shared.CurrentProjectsList.get(i).cv);
                         Shared.CurrentProjectsList.get(i).title_members.setVisibility(View.GONE);
                         Shared.CurrentProjectsList.get(i).members.setVisibility(View.GONE);
                     }
+                }
+            });
+            Shared.CurrentProjectsList.get(i).gitBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse(Shared.CurrentProjectsList.get(i).GitLink)));
                 }
             });
             ll.addView(Shared.CurrentProjectsList.get(i).ll);

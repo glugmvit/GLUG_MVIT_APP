@@ -26,7 +26,6 @@ public class Tab_fragment_0 extends Fragment {
     SwipeRefreshLayout srl;
     LayoutInflater li;
     boolean first;
-    boolean showing;
     LinearLayout ll;
     mSyncTask s;
 
@@ -104,7 +103,7 @@ public class Tab_fragment_0 extends Fragment {
             Shared.UpcomingEventsList.get(i).cv=(CardView)Shared.UpcomingEventsList.get(i).ll.findViewById(R.id.ue_card_view);
 
             Shared.UpcomingEventsList.get(i).Event=(TextView)Shared.UpcomingEventsList.get(i).ll.findViewById(R.id.txtName);
-            Shared.UpcomingEventsList.get(i).Event.setText(Shared.UpcomingEventsList.get(i).event);
+            Shared.UpcomingEventsList.get(i).Event.append(Shared.UpcomingEventsList.get(i).event);
 
             Shared.UpcomingEventsList.get(i).Desc=(TextView) Shared.UpcomingEventsList.get(i).ll.findViewById(R.id.ue_desc);
             Shared.UpcomingEventsList.get(i).Desc.setText(Shared.UpcomingEventsList.get(i).desc);
@@ -116,18 +115,18 @@ public class Tab_fragment_0 extends Fragment {
             Shared.UpcomingEventsList.get(i).DnT.setText(Shared.UpcomingEventsList.get(i).datentime);
 
             Shared.UpcomingEventsList.get(i).Venue=(TextView)Shared.UpcomingEventsList.get(i).ll.findViewById(R.id.venue);
-            Shared.UpcomingEventsList.get(i).Venue.setText(Shared.UpcomingEventsList.get(i).venue);
+            Shared.UpcomingEventsList.get(i).Venue.append(Shared.UpcomingEventsList.get(i).venue);
 
             Shared.UpcomingEventsList.get(i).Speaker=(TextView)Shared.UpcomingEventsList.get(i).ll.findViewById(R.id.speaker);
-            Shared.UpcomingEventsList.get(i).Speaker.setText(Shared.UpcomingEventsList.get(i).speaker);
+            Shared.UpcomingEventsList.get(i).Speaker.append(Shared.UpcomingEventsList.get(i).speaker);
 
-            showing=false;
+            Shared.UpcomingEventsList.get(i).clicked=false;
 
             Shared.UpcomingEventsList.get(i).cv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(!showing) {
-                        showing=true;
+                    if(!Shared.UpcomingEventsList.get(i).clicked) {
+                        Shared.UpcomingEventsList.get(i).clicked=true;
                         TransitionManager.beginDelayedTransition(Shared.UpcomingEventsList.get(i).cv);
                         Shared.UpcomingEventsList.get(i).Speaker.setVisibility(View.VISIBLE);
                         Shared.UpcomingEventsList.get(i).Venue.setVisibility(View.VISIBLE);
@@ -135,7 +134,7 @@ public class Tab_fragment_0 extends Fragment {
                     }
                     else
                     {
-                        showing=false;
+                        Shared.UpcomingEventsList.get(i).clicked=false;
                         TransitionManager.beginDelayedTransition(Shared.UpcomingEventsList.get(i).cv);
                         Shared.UpcomingEventsList.get(i).Speaker.setVisibility(View.GONE);
                         Shared.UpcomingEventsList.get(i).Venue.setVisibility(View.GONE);

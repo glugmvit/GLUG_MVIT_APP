@@ -29,6 +29,7 @@ public class UpcomingEventsDataObject
     TextView Extras;
     CardView cv;
     LinearLayout ll;
+    boolean clicked;
     UpcomingEventsDataObject(String... params)
     {
         event=params[0];

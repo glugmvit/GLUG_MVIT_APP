@@ -20,6 +20,7 @@ public class CurrentProjectsDataObject
     CardView cv;
     TextView title,desctext,title_members,members;
     Button gitBtn;
+    boolean clicked;
 
     CurrentProjectsDataObject(String... params)
     {
