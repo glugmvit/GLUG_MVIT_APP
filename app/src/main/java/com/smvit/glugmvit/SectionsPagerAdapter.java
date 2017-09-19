@@ -20,12 +20,15 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 0)
+        if (position == 0) {
             return new Tab_fragment_0();
-        else if (position == 1)
+        }
+        else if (position == 1) {
             return new Tab_fragment_1();
-         else
-        return new Tab_fragment_2();
+        }
+         else {
+            return new Tab_fragment_2();
+        }
     }
 
     @Override
@@ -38,11 +41,11 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "UPCOMING";
+                return "EVENTS";
             case 1:
-                return "CURRENT PROJECTS";
+                return "PROJECTS";
             case 2:
-                return "IDEA BAG";
+                return "IDEAS";
         }
         return null;
     }

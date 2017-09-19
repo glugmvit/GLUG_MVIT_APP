@@ -4,29 +4,108 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NAME: "/>
+
+    <EditText
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Tab 2 content"/>
+        android:textColor="#000000"/>
 
-   <RelativeLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:gravity="bottom|right">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USN: "/>
 
-       <android.support.design.widget.FloatingActionButton
-           android:id="@+id/fab"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_gravity="bottom|end"
-           android:layout_margin="@dimen/fab_margin"
-           app:srcCompat="@android:drawable/ic_dialog_email" />
-   </RelativeLayout>
+    <EditText
+        android:id="@+id/usn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Idea Description: "/>
+
+    <EditText
+        android:id="@+id/idea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:minLines="3"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Steps to suggest an idea !"
+        android:textColor="#000000"
+        android:textSize="30dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:text=" 1. Enter your name"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:text=" 2. Enter your USN"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:text=" 3. Enter your Idea"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:text=" 4. Click on Gmail Button"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:text=" 5. Send the mail"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|right">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@android:drawable/ic_dialog_email" />
+    </RelativeLayout>
 
 </LinearLayout>

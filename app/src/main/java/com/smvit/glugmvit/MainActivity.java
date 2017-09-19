@@ -1,21 +1,15 @@
 package com.smvit.glugmvit;
 
-import android.app.ProgressDialog;
-import android.os.AsyncTask;
-import android.os.Build;
+import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
-
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
         lv=(ListView)findViewById(R.id.DrawerView);
 
         Shared.DbObjs=new ArrayList<>();
-
-        Shared.appContext=getApplicationContext();
+        Shared.CurrentProjectsList=new ArrayList<>();
+        Shared.UpcomingEventsList=new ArrayList<>();
 
         DrawerList=new ArrayList<>();
         DrawerList.add("Overview");
@@ -63,33 +57,6 @@ public class MainActivity extends AppCompatActivity {
         cf.setArguments(b);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment,cf).commit();
-
-        /*new AsyncTask<Void,Void,Void>()
-        {
-            ProgressDialog pd;
-            @Override
-            protected void onPreExecute()
-            {
-                pd=new ProgressDialog(MainActivity.this);
-                pd.setTitle("Connecting...");
-                pd.setMessage("Please Wait");
-                pd.show();
-            }
-            @Override
-            protected Void doInBackground(Void... params) {
-                MongoClientURI uri=new MongoClientURI("mongodb://Susmit:abcd1234@ds145273.mlab.com:45273/glugmvitappdb");
-                Shared.client=new MongoClient(uri);
-                //credentials=MongoCredential.createCredential("testUser","testDb",new String("qwerty").toCharArray());
-                Shared.db=Shared.client.getDatabase("glugmvitappdb");
-                Shared.coll=Shared.db.getCollection("TestCollection");
-                return null;
-            }
-            @Override
-            protected void onPostExecute(Void v)
-            {
-                pd.dismiss();
-            }
-        }.execute(); */
 
         ib.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,5 +76,11 @@ public class MainActivity extends AppCompatActivity {
                 dl.closeDrawer(Gravity.START,true);
             }
         });
+    }
+    @Override
+    public void onDestroy()
+    {
+        super.onDestroy();
+        Shared.client.close();
     }
 }

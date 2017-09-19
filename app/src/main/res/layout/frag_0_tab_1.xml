@@ -2,9 +2,13 @@
 <!---Created by Susmit on 1/07/2017-->
 <!--Modified by Mukund on 15/08/17-->
 <!--Modified by Susmit on 17/08/17-->
-<ScrollView
+<android.support.v4.widget.SwipeRefreshLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/psrl">
+<ScrollView
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:animateLayoutChanges="true"
@@ -13,90 +17,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
+        android:id="@+id/pll"
         android:layout_height="wrap_content">
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:paddingTop="20dp"
-            card_view:cardCornerRadius="2dp">
-            <RelativeLayout
-                android:id="@+id/content"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/project_title"
-                    android:textSize="24sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="PROJECT TITLE"
-                    android:textStyle="bold"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true" />
-                <TextView
-                    android:id="@+id/project_description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/project_title"
-                    android:layout_marginBottom="10dp"
-                    android:visibility="gone"
-                    android:text="Descrption about the project,and all the related stuff that the reader must be informed about..."/>
-               <TextView
-                    android:id="@+id/title_members"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="MEMBERS"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_below="@+id/project_description"
-                    android:visibility="gone" />
-
-                <TextView
-                    android:id="@+id/members"
-                    android:layout_width="match_parent"
-                    android:layout_below="@+id/title_members"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone"
-                    android:layout_marginBottom="10dp"
-                    android:text="member A" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:id="@+id/fixedPart"
-                    android:layout_below="@id/members">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <ImageButton
-                            android:background="@mipmap/github_mark"
-                            android:id="@+id/github_icon"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                        <ImageButton
-                            android:clickable="true"
-                            android:background="@mipmap/arrow_down"
-                            android:id="@+id/show"
-                            android:layout_gravity="end"
-                            android:layout_height="wrap_content"
-                            android:layout_width="wrap_content" />
-                    </LinearLayout>
-                    <Button
-                        android:id="@+id/contribute"
-                        android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
-                        android:text="CONTRIBUTE"
-                        android:background="#303030"
-                        android:textColor="@android:color/white"/>
-                </LinearLayout>
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
     </LinearLayout>
 </ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

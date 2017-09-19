@@ -52,6 +52,8 @@ public class ContentFragment extends Fragment {
 
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.OverviewTabs);
         tabLayout.setTabTextColors(0xFFD7D7D7,0xFFFFFFFF);
+        //No.of tabs scrolled before former tab refreshes.
+        mViewPager.setOffscreenPageLimit(2);
         tabLayout.setupWithViewPager(mViewPager);
     }
 }
