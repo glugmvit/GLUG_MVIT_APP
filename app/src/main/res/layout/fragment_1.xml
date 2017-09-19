@@ -2,10 +2,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gluglogo"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="“Libre Not Gratis”, free as in freedom of speech and not as in free beer,a freedom to use, understand, modify and share the software.This is the freedom we care about."
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#ff6600"
+            android:fontFamily="GNU Unifont"
+            android:layout_marginBottom="5sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GNU Linux Users Group, or better known as GLUG, happened when a group of students were actively supporting free software. The sole purpose and inception of the club, right from the very beginning, is kept quite simple- Open to any free software enthusiasts."
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            android:fontFamily="GNU Unifont"
 
+            android:textSize="12sp"/>
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Display Content #1"/>
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This community has been always described as place for learning and sharing, a place to evolve and grow together. A place to work towards our failures together and also, beam happily in our successes together. And to be more precise, this community works as a guide for the fresher's in this industry. Helping with any sort of queries that the fresher's face, has always been this society's pillar. Also, a few may describe this society of ours, to be a fun place- where everyday is a new adventure which involves fun and also competitions, this striving us to be better than what we are.With the club being built, people required a particular direction to go forward. To look into different aspects of free software. And hence, FSMK gave the people their required directions. Building step by step, everyday. With words inspired from free software visionaries like Richard Stallman and Eben Moglen, members worked for it together- thus landing us up with this evolved version the GLUG club of Sir MVIT college."
+        android:layout_gravity="center_vertical"
+        android:textStyle="bold"
+        android:fontFamily="GNU Unifont"
+        android:textSize="12sp"/>
+
 </LinearLayout>
